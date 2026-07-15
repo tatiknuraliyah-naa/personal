@@ -16,6 +16,30 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="stars"></div>
+    <div class="background-effects">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+    </div>
+
+    <div class="cursor-glow"></div>
+    <audio id="bg-music" loop>
+      <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-btn" id="music-btn">
+      🎧 Play Music
+    </button>
+
     <div class="page-glow glow-one"></div>
     <div class="page-glow glow-two"></div>
     <header class="site-header" id="home">
@@ -24,27 +48,34 @@
         <button class="menu-toggle" aria-label="Buka navigasi" aria-expanded="false">
           <span></span><span></span>
         </button>
-        <div class="nav-links" id="nav-links">
-          <a class="active" href="#home">Home</a><a href="#about">About</a
-          ><a href="#skills">Skills</a><a href="#projects">Projects</a
-          ><a href="#contact">Contact</a>
-        </div>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
         <a class="cv-button" href="#contact">CV <span>Coming Soon</span></a>
       </nav>
     </header>
 
     <main>
-      <section class="hero container">
+      <section class="hero container" id="about">
         <div class="hero-copy" data-aos="fade-up" data-aos-duration="800">
-          <p class="eyebrow"><span></span>Hello, I'm</p>
-          <h1>Tatik <em>Nur Aliyah</em></h1>
-          <div class="role">
-            <i></i> SMK Student <b>·</b> Rekayasa Perangkat Lunak
-          </div>
-          <p class="hero-text">
-            Siswi RPL yang sedang belajar membangun website modern, responsif,
-            dan nyaman digunakan — satu proyek pada satu waktu.
-          </p>
+              <p class="eyebrow">
+                <span></span>
+                Hello, welcome to my portfolio
+              </p>
+              <h1>Hi, I'm <em>Tatik.</em></h1>
+              <div class="role">
+                <i></i>
+                Learning • Creating • Growing
+              </div>
+              <p class="hero-text">
+                I enjoy creating simple and beautiful websites while exploring
+                new ideas, improving my skills, and enjoying every step of the
+                learning journey.
+              </p>
           <div class="hero-actions">
             <a class="button primary" href="#projects"
               >Explore Projects <b>↗</b></a
@@ -52,6 +83,11 @@
           </div>
           <div class="hero-note">
             <span>✦</span> Currently learning HTML, CSS & JavaScript
+          </div><br>
+          <div class="hero-tags">
+            <span>🎧 Music</span>
+            <span>🍳 Cooking</span>
+            <span>🎥 Anime & Streams</span>
           </div>
         </div>
         <div
@@ -195,64 +231,76 @@
       </section>
 
       <section id="hobbies" class="section hobbies-section">
-  <div class="container">
+        <div class="container">
 
-    <div class="section-heading center" data-aos="fade-up">
-      <p class="eyebrow"><span></span>03 — Beyond coding</p>
-      <h2>Things I <em>love.</em></h2>
-      <p class="subheading">
-        Selain belajar teknologi, saya menikmati hal-hal kecil yang memberi
-        inspirasi dan keseimbangan dalam keseharian.
-      </p>
-    </div>
+          <div class="section-heading center" data-aos="fade-up">
+            <p class="eyebrow"><span></span>03 — Beyond Coding</p>
 
-    <div class="hobbies-grid">
+            <h2>Things I <em>Enjoy.</em></h2>
 
-      <article class="hobby-card" data-aos="fade-up">
-        <div class="hobby-top">
-          <span class="hobby-icon">🎧</span>
-          <span class="hobby-number">01</span>
+            <p class="subheading">
+              Outside of coding, I enjoy spending my free time doing simple things
+              that help me relax, recharge, and find new inspiration.
+            </p>
+          </div>
+
+          <div class="hobbies-grid">
+
+            <!-- Hobby 1 -->
+            <article class="hobby-card" data-aos="fade-up">
+              <div class="hobby-top">
+                <span class="hobby-icon">🎧</span>
+                <span class="hobby-number">01</span>
+              </div>
+
+              <h3>Listening to Music</h3>
+
+              <p>
+                Music helps me relax, improve my mood, and stay focused while
+                learning or working on new projects.
+              </p>
+            </article>
+
+            <!-- Hobby 2 -->
+            <article class="hobby-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="hobby-top">
+                <span class="hobby-icon">🍳</span>
+                <span class="hobby-number">02</span>
+              </div>
+
+              <h3>Cooking</h3>
+
+              <p>
+                I enjoy trying new recipes and exploring different flavors.
+                Cooking teaches me creativity, patience, and attention to detail.
+              </p>
+            </article>
+
+            <!-- Hobby 3 -->
+            <article class="hobby-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="hobby-top">
+                <span class="hobby-icon">🎥</span>
+                <span class="hobby-number">03</span>
+              </div>
+
+              <h3>Watching Anime & Streams</h3>
+
+              <p>
+                Watching anime and live streams is one of my favorite ways to unwind.
+                They inspire creativity and help me recharge before learning
+                something new again.
+              </p>
+            </article>
+
+          </div>
+
         </div>
-        <h3>Listening to Music</h3>
-        <p>
-          Musik menjadi teman saya untuk bersantai, meningkatkan mood,
-          dan menemukan inspirasi baru.
-        </p>
-      </article>
-
-      <article class="hobby-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="hobby-top">
-          <span class="hobby-icon">📖</span>
-          <span class="hobby-number">02</span>
-        </div>
-        <h3>Reading</h3>
-        <p>
-          Membaca membantu saya memperluas wawasan, mendapatkan ide baru,
-          dan terus belajar dari berbagai cerita.
-        </p>
-      </article>
-
-      <article class="hobby-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="hobby-top">
-          <span class="hobby-icon">🍳</span>
-          <span class="hobby-number">03</span>
-        </div>
-        <h3>Cooking</h3>
-        <p>
-          Memasak membuat saya bisa berkreasi, mencoba hal baru,
-          dan menikmati proses membuat sesuatu.
-        </p>
-      </article>
-
-    </div>
-
-  </div>
-</section>
+      </section>
 
       <section id="projects" class="section container">
         <div class="section-heading project-heading" data-aos="fade-up">
           <div>
-            <p class="eyebrow"><span></span>03 — Selected works</p>
+            <p class="eyebrow"><span></span>04 — Selected works</p>
             <h2>Projects I've <em>built.</em></h2>
           </div>
           <p>
@@ -287,44 +335,63 @@
           <article class="project-card" data-aos="fade-up" data-aos-delay="90">
             <div class="project-thumb portfolio-thumb">
               <div class="mini-nav">
-                TN <span>About&nbsp; Work&nbsp; Contact</span>
+                TN <span>About&nbsp; Projects&nbsp; Contact</span>
               </div>
-              <div class="mini-title">Hi, I’m <em>Tatik.</em></div>
+              <div class="mini-title">Hi, I'm <em>Tatik.</em></div>
               <div class="mini-bars"><i></i><i></i><i></i></div>
             </div>
+
             <div class="project-body">
               <div class="project-number">02 / PROJECT</div>
+
               <h3>Personal Portfolio</h3>
+
               <p>
-                Media personal branding untuk menampilkan perjalanan belajar dan
-                karya.
+                Website portfolio pribadi yang dibuat untuk memperkenalkan diri,
+                membagikan perjalanan belajar, serta menampilkan project yang telah saya
+                kerjakan.
               </p>
+
               <div class="tags">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
               </div>
-              <a href="#contact" class="project-link">View project <b>↗</b></a>
+
+              <span class="project-current">
+                ✦ You're viewing this website
+              </span>
             </div>
           </article>
           <article class="project-card" data-aos="fade-up" data-aos-delay="180">
-            <div class="project-thumb coming-soon-thumb">
-              <div class="coming-soon-content">
-                <h3>✨ Coming Soon</h3>
-                <p>More projects are currently in development.</p>
-              </div>
-            </div>
-            <div class="project-body">
-              <div class="project-number">03 / PROJECT</div>
-              <h3>Coming Soon</h3>
-              <p>
-                Saya sedang mengembangkan proyek baru untuk terus meningkatkan
-                kemampuan di bidang web development. Nantikan pembaruan
-                berikutnya!
-              </p>
-              <div class="tags">
-                <span>Learning</span><span>In Progress</span>
-              </div>
-              <span class="project-link disabled">Coming Soon</span>
-            </div>
+  <div class="project-thumb coming-soon-thumb">
+    <div class="coming-soon-content">
+      <h3>🚧 Next Project</h3>
+      <p>Always learning, always building.</p>
+    </div>
+  </div>
+
+  <div class="project-body">
+    <div class="project-number">03 / PROJECT</div>
+
+    <h3>Next Project</h3>
+
+    <p>
+      I'm currently exploring new ideas and improving my skills.
+      This space will soon be filled with another project that
+      reflects my learning journey.
+    </p>
+
+    <div class="tags">
+      <span>UI Design</span>
+      <span>Web Dev</span>
+      <span>In Progress</span>
+    </div>
+
+    <span class="project-link disabled">
+      Stay Tuned ✨
+    </span>
+  </div>
           </article>
         </div>
       </section>
@@ -332,7 +399,7 @@
       <section class="section container experience">
         <div class="education-card" data-aos="fade-up">
           <div>
-            <p class="eyebrow"><span></span>04 — Experience</p>
+            <p class="eyebrow"><span></span>05 — Experience</p>
 
             <h2>Praktik Kerja <em>Lapangan.</em></h2>
 
@@ -364,7 +431,7 @@
       <section id="journey" class="section journey-section">
         <div class="container">
           <div class="section-heading center" data-aos="fade-up">
-            <p class="eyebrow"><span></span>05 — My progress</p>
+            <p class="eyebrow"><span></span>06 — My progress</p>
             <h2>Learning <em>journey.</em></h2>
           </div>
           <div class="timeline">
@@ -412,7 +479,7 @@
       <section class="section container education">
         <div class="education-card" data-aos="fade-up">
           <div>
-            <p class="eyebrow"><span></span>06 — Education</p>
+            <p class="eyebrow"><span></span>07 — Education</p>
             <h2>Growing at <em>SMK.</em></h2>
             <p>
               Rekayasa Perangkat Lunak adalah ruang saya untuk mempelajari dasar
@@ -431,7 +498,7 @@
       <section id="contact" class="section contact-section">
         <div class="container contact-grid">
           <div data-aos="fade-up">
-            <p class="eyebrow"><span></span>07 — Get in Touch</p>
+            <p class="eyebrow"><span></span>08 — Get in Touch</p>
             <h2>Let's create<br />something <em>nice.</em></h2>
             <p class="contact-copy">
               Terima kasih sudah mengunjungi portofolio saya. Jika ingin

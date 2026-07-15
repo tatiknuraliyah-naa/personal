@@ -52,3 +52,89 @@ form.addEventListener("submit", async (event) => {
   button.textContent = "Send Message";
   button.disabled = false;
 });
+
+const music = document.getElementById("bg-music");
+const musicBtn = document.getElementById("music-btn");
+
+musicBtn.addEventListener("click", () => {
+  if (music.paused) {
+    music.play();
+    musicBtn.innerHTML = "🎧 Pause Music";
+  } else {
+    music.pause();
+    musicBtn.innerHTML = "🎧 Play Music";
+  }
+});
+const glow=document.querySelector(".cursor-glow");
+
+let timer;
+
+window.addEventListener("mousemove",(e)=>{
+
+glow.style.left=e.clientX+"px";
+glow.style.top=e.clientY+"px";
+
+glow.style.opacity=".9";
+
+clearTimeout(timer);
+
+timer=setTimeout(()=>{
+
+glow.style.opacity="0";
+
+},120);
+
+});
+const stars = document.getElementById("stars");
+const icons = ["✦","✧","✦"];
+
+const positions = [];
+
+const totalStars = 28;
+
+for(let i = 0; i < totalStars; i++){
+
+    let x, y;
+    let valid = false;
+
+    while(!valid){
+
+        x = Math.random() * window.innerWidth;
+        y = Math.random() * document.body.scrollHeight;
+
+        valid = true;
+
+        for(const pos of positions){
+
+            const dx = x - pos.x;
+            const dy = y - pos.y;
+
+            if(Math.sqrt(dx*dx + dy*dy) < 120){
+                valid = false;
+                break;
+            }
+
+        }
+
+    }
+
+    positions.push({x,y});
+
+    const star = document.createElement("span");
+    star.className = "star";
+
+    star.textContent =
+        icons[Math.floor(Math.random()*icons.length)];
+
+    star.style.left = x + "px";
+    star.style.top = y + "px";
+
+    star.style.fontSize =
+        (10 + Math.random()*8) + "px";
+
+    star.style.animationDelay =
+        Math.random()*6 + "s";
+
+    stars.appendChild(star);
+
+}

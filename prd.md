@@ -2,12 +2,12 @@
 
 # Personal Portfolio Website
 
-**Version:** 2.0
+**Version:** 3.0
 **Project Name:** Tatik Nur Aliyah – Personal Portfolio
 **Owner:** Tatik Nur Aliyah
 **Role:** Siswi SMK Jurusan Rekayasa Perangkat Lunak (RPL)
 **Project Type:** Personal Portfolio Website
-**Status:** Development
+**Status:** Modern Revision
 
 ---
 
@@ -243,46 +243,24 @@ Website **tidak boleh memberikan kesan bahwa pemilik sudah menjadi developer pro
 # 8. Website Structure
 
 ```
-Home
-
-↓
-
-Hero
-
-↓
-
+Home (Hero)
+    ↓
 About Me
-
-↓
-
+    ↓
 Skills & Learning
-
-↓
-
-Featured Projects
-
-↓
-
-Learning Journey
-
-↓
-
-Education
-
-↓
-
-Certificates
-
-↓
-
+    ↓
+Experience
+    ↓
+Featured Project
+    ↓
+Beyond Coding
+    ↓
 Contact
-
-↓
-
+    ↓
 Footer
 ```
 
-Navigasi menggunakan **smooth scrolling** sehingga pengguna dapat berpindah antar section dengan nyaman.
+Navigation menggunakan **smooth scrolling** dengan active state indicator di navbar.
 
 ---
 
@@ -295,30 +273,36 @@ Navbar berada di bagian atas halaman dan bersifat **sticky**, sehingga tetap ter
 * Home
 * About
 * Skills
+* Experience
 * Projects
+* Beyond Coding
 * Contact
-
-Di sisi kanan terdapat tombol:
-
-> **Download CV**
-
-*(Jika CV belum tersedia, tombol dapat diubah menjadi "Coming Soon" atau disembunyikan sementara.)*
 
 ### Desain Navbar
 
-* Semi transparan
-* Efek blur (glassmorphism)
-* Border tipis
-* Rounded penuh
-* Saat scroll, background menjadi sedikit lebih gelap
+* Default: Semi transparan tanpa blur
+* Saat scroll: Glassmorphism dengan background lebih gelap, blur 18px, dan border subtil
+* Shadow tipis untuk kedalaman
+* Border dengan opacity rendah
+* Rounded penuh (border-radius: 99px)
+* Transition animasi halus (0.3s)
 
 ### Interaksi
 
-Hover menu:
+**Hover menu:**
+* Warna berubah menjadi lavender (#d9ccff)
+* Underline tipis dengan animasi width
+* Transisi 0.25 detik
 
-* Warna berubah menjadi lavender
-* Underline tipis
-* Transisi ±0,3 detik
+**Active state:**
+* Indicator berwarna lavender menunjukkan section yang sedang dilihat
+* Transisi smooth saat berpindah section
+
+**Mobile:**
+* Menu berubah menjadi hamburger menu
+* Drawer menu dari atas dengan animasi slide
+
+
 
 ---
 
@@ -326,9 +310,7 @@ Hover menu:
 
 ## Tujuan
 
-Hero section menjadi area pertama yang dilihat pengunjung. Bagian ini harus mampu memperkenalkan identitas pemilik website secara singkat, jelas, dan menarik.
-
----
+Hero section menjadi area pertama yang dilihat pengunjung. Bagian ini harus mampu memperkenalkan identitas pemilik website secara singkat, jelas, dan menarik dengan sentuhan personal.
 
 ## Layout
 
@@ -338,81 +320,36 @@ Layout menggunakan dua kolom.
 
 Berisi:
 
-* Greeting
-* Nama
-* Status
-* Deskripsi
-* Tombol aksi
+* Greeting ("Hi, I'm Tatik")
+* Deskripsi singkat
+* Call to action buttons
 
 ### Kanan
 
 Berisi:
 
-* Foto profil
-* Glow effect
-* Decorative blur
+* Foto profil sebagai fokus utama
+* Glow effect yang lembut di sekitar foto
 * Floating animation ringan
+* Info card kecil dengan badge
 
----
+## Info Card
 
-## Greeting
+Ditampilkan di samping atau bawah foto profil dengan styling glassmorphic.
 
-```
-Hello, I'm
-```
+Isi:
 
----
+* 📍 Indonesia
+* 🎓 Software Engineering Student
+* 💼 Internship at Perwira Media Solusi
+* 🌱 Always Learning
 
-## Nama
+## Visual Enhancement
 
-```
-Tatik Nur Aliyah
-```
-
-Menggunakan ukuran font paling besar pada halaman.
-
----
-
-## Status
-
-```
-SMK Student
-
-Rekayasa Perangkat Lunak (RPL)
-```
-
-Tidak menggunakan gelar seperti **Front-End Developer**, karena website ingin menunjukkan proses belajar yang sedang berlangsung.
-
----
-
-## Deskripsi
-
-> Halo! Saya **Tatik Nur Aliyah**, siswi jurusan **Rekayasa Perangkat Lunak (RPL)** yang memiliki ketertarikan pada pengembangan website dan desain antarmuka. Saat ini saya sedang mempelajari HTML, CSS, dan JavaScript melalui berbagai proyek serta terus mengembangkan kemampuan agar dapat menciptakan website yang modern, responsif, dan nyaman digunakan.
-
----
-
-## Call To Action
-
-Primary Button
-
-> **Explore Projects**
-
-Secondary Button
-
-> **Contact Me**
-
----
-
-## Hero Background
-
-Background menggunakan kombinasi:
-
-* Gradient gelap
-* Blur ungu
-* Glow lavender
-* Noise texture tipis (opsional)
-
-Tidak menggunakan background yang terlalu ramai agar fokus tetap pada konten.
+* Glow effect berwarna lavender yang lembut
+* Floating animation untuk foto (naik-turun ringan)
+* Background dengan blur gradient
+* Tidak terlalu ramai, tetap minimal
 
 ---
 
@@ -420,51 +357,24 @@ Tidak menggunakan background yang terlalu ramai agar fokus tetap pada konten.
 
 ## Tujuan
 
-Memberikan gambaran singkat mengenai siapa pemilik website, minat, tujuan belajar, dan motivasi dalam mempelajari dunia teknologi.
+Memberikan gambaran singkat mengenai siapa pemilik website dengan bahasa yang natural, warm, dan mudah dipahami.
 
----
+## Isi (Bahasa Inggris Natural)
 
-## Judul
+> Hi! I'm **Tatik Nur Aliyah**, a software engineering student interested in web development. I'm currently doing an internship at Perwira Media Solusi while continuing to learn and improve my skills through hands-on projects. I enjoy the process of turning ideas into well-designed websites, and I'm always curious to learn new things in the tech world.
 
-```
-About Me
-```
+## Status Badges
 
----
+* 📍 Indonesia
+* 🎓 RPL Student  
+* 💻 Learning Web Development
 
-## Isi
+## Tone
 
-> Halo! Saya **Tatik Nur Aliyah**, siswi **SMK jurusan Rekayasa Perangkat Lunak (RPL)** yang memiliki minat pada pengembangan website dan desain antarmuka. Saya senang mempelajari teknologi baru serta mencoba menerapkannya melalui berbagai proyek sederhana. Bagi saya, setiap proyek adalah kesempatan untuk belajar, meningkatkan kemampuan, dan memahami cara membangun website yang lebih baik.
-
-> Saat ini saya sedang mempelajari HTML, CSS, JavaScript, serta berbagai tools pendukung seperti Git, GitHub, dan Figma. Saya percaya bahwa proses belajar yang konsisten akan membantu saya berkembang dan mempersiapkan diri untuk menghadapi dunia kerja di bidang teknologi.
-
----
-
-## Highlight Cards
-
-Tampilkan 4 kartu kecil.
-
-### 🌱 Selalu Belajar
-
-Terbuka untuk mempelajari teknologi dan pengalaman baru.
-
----
-
-### 💡 Suka Mencoba Hal Baru
-
-Senang mengeksplorasi desain dan pengembangan website.
-
----
-
-### 🎯 Teliti
-
-Berusaha mengerjakan setiap proyek dengan rapi dan terstruktur.
-
----
-
-### 🚀 Terus Berkembang
-
-Selalu ingin meningkatkan kemampuan sedikit demi sedikit melalui latihan dan pengalaman.
+* Natural dan hangat, tidak terlalu formal
+* Menunjukkan passion dan curiosity
+* Fokus pada pembelajaran dan pertumbuhan
+* Tidak terdengar seperti AI, terasa genuine
 
 ---
 
@@ -482,21 +392,47 @@ Animasi harus halus dan tidak mengganggu kenyamanan pengguna.
 
 ---
 
-# 13. Skills & Learning
+# 12. Skills & Learning
 
 ## Tujuan
 
-Section ini bertujuan untuk memperkenalkan teknologi, tools, dan software yang sedang dipelajari selama menempuh pendidikan di jurusan Rekayasa Perangkat Lunak (RPL). Informasi yang ditampilkan menggambarkan proses belajar yang sedang berlangsung, bukan tingkat keahlian profesional.
-
----
+Section ini menampilkan teknologi dan tools yang sedang dipelajari, dengan pembedaan jelas antara skills yang sudah dipelajari dan yang masih dalam tahap pembelajaran.
 
 ## Layout
 
-Menggunakan **grid card** responsif.
+Menggunakan **grid card** responsif dengan dua kategori:
 
-Desktop:
+### Technical Skills
 
-* 3 kolom
+* HTML
+* CSS
+* JavaScript
+* Responsive Design
+* Git & GitHub
+
+### Currently Learning
+
+* UI Design
+* Modern JavaScript
+* Website Deployment
+* Problem Solving
+
+## Badge
+
+Setiap skill di "Currently Learning" ditandai dengan badge **"Learning"** untuk menunjukkan status pembelajaran.
+
+## Card Design
+
+* Glassmorphic background
+* Hover effect dengan glow effect
+* Icon atau symbol di atas
+* Deskripsi singkat
+
+## Responsiveness
+
+* Desktop: 3-4 kolom
+* Tablet: 2-3 kolom
+* Mobile: 1 kolom
 
 Tablet:
 
