@@ -1761,7 +1761,7 @@ transform:translateY(-70px);
 @keyframes twinkle{
 
 0%,100%{
-opacity:.12;
+opacity:.15;
 }
 
 50%{

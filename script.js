@@ -90,7 +90,7 @@ const icons = ["✦","✧","✦"];
 
 const positions = [];
 
-const totalStars = 28;
+const totalStars = 105;
 
 for(let i = 0; i < totalStars; i++){
 
