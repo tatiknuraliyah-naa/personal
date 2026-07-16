@@ -1790,131 +1790,137 @@ opacity:.7;
 
     user-select:none;
 }
-/* ================= POPUP ================= */
 
+/* ================= POPUP PROJECTION GALLERY ================= */
 .popup-overlay{
-    position: fixed;
-    inset: 0;
-    background: rgba(10,10,15,.75);
-    backdrop-filter: blur(8px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: .35s ease;
-    z-index: 9999;
+    position:fixed;
+    inset:0;
+    background:rgba(10,10,15,.35);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    visibility:hidden;
+    transition:.5s ease;
+    z-index:9999;
 }
 
 .popup-overlay.show{
-    opacity: 1;
-    visibility: visible;
+    opacity:1;
+    visibility:visible;
 }
-
+/* BOX POPUP */
 .popup-box{
-    width: 820px;
-    max-width: 92%;
-    max-height: 80vh;
-    overflow-y: auto;
-    background: #1e1b27;
-    border: 1px solid rgba(255,255,255,.08);
-    border-radius: 24px;
-    padding: 30px;
-    position: relative;
-    animation: popup .35s ease;
-    box-shadow: 0 15px 40px rgba(0,0,0,.35);
+    width:700px;
+    max-width:85%;
+    max-height:75vh;
+    overflow-y:auto;
+    background:rgba(30,27,39,.8);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:24px;
+    padding:30px;
+    box-shadow:
+    0 0 50px rgba(181,145,245,.35);
+    transform:
+    translateY(40px)
+    scale(.85);
+    opacity:0;
+    transition:.5s ease;
 }
-
-@keyframes popup{
-
-    from{
-        opacity:0;
-        transform:translateY(25px) scale(.95);
-    }
-
-    to{
-        opacity:1;
-        transform:none;
-    }
-
+.popup-overlay.show .popup-box{
+    transform:
+    translateY(0)
+    scale(1);
+    opacity:1;
 }
-
-.close-popup{
-    position:absolute;
-    top:18px;
-    right:20px;
-    width:40px;
-    height:40px;
-    border:none;
-    border-radius:50%;
-    cursor:pointer;
-    background:#8d68e8;
-    color:white;
-    font-size:18px;
-    transition:.3s;
-}
-
-.close-popup:hover{
-    transform:rotate(90deg);
-}
-
+/* TITLE */
 .popup-title{
     text-align:center;
     font-size:30px;
     margin-bottom:25px;
     color:#d9c8ff;
 }
-
+/* GRID */
 .popup-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
     margin-top:20px;
 }
-
+/* CARD FOTO */
 .popup-card{
+    position:relative;
     overflow:hidden;
     border-radius:18px;
     cursor:pointer;
-    transition:.35s;
+    animation:photoIn .6s ease both;
 }
-
+/* FOTO */
 .popup-card img{
     width:100%;
-    height:180px;
+    height:280px;
     object-fit:cover;
     display:block;
-    transition:.4s;
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:18px;
+    transition:.4s ease;
 }
-
+/* HOVER */
 .popup-card:hover img{
     transform:scale(1.08);
+    border-color:#b591f5;
+    box-shadow:
+    0 0 25px rgba(181,145,245,.45);
 }
-
 .popup-card:hover{
     transform:translateY(-5px);
 }
-
-/* Layout kolase */
-
+/* FOTO UTAMA */
 .popup-card.big{
     grid-column:span 2;
-    grid-row:span 2;
 }
-
 .popup-card.big img{
-    height:375px;
+    height:350px;
 }
+/* TEXT DI FOTO */
+.photo-text{
+    position:absolute;
+    bottom:12px;
+    left:12px;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(5px);
+    padding:7px 15px;
+    border-radius:20px;
+    color:white;
+    font-size:14px;
+}
+/* CAPTION */
+.popup-caption{
+    grid-column:1 / -1;
+    margin-top:10px;
+    padding:18px;
+    text-align:center;
+    background:rgba(255,255,255,.05);
+    border-radius:18px;
+    color:#d8c9f5;
+    font-size:14px;
+    line-height:1.7;
+    font-style:italic
+}
+/* FOTO MUNCUL SATU-SATU */
 
-.popup-card.wide{
-    grid-column:span 2;
-}
-.popup-card img{
-    border:2px solid rgba(255,255,255,.08);
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
-}
-
-.popup-card:hover img{
-    border-color:#b591f5;
-    box-shadow:0 0 25px rgba(181,145,245,.45);
+@keyframes photoIn{
+    from{
+        opacity:0;
+        transform:
+        translateY(30px)
+        scale(.85);
+    }
+    to{
+        opacity:1;
+        transform:
+        translateY(0)
+        scale(1);
+    }
 }

@@ -247,8 +247,9 @@
 
           <div class="hobbies-grid">
 
+            
             <!-- Hobby 1 -->
-            <article class="hobby-card" data-aos="fade-up">
+            <article id="musicCard" class="hobby-card" data-aos="fade-up">
               <div class="hobby-top">
                 <span class="hobby-icon">🎧</span>
                 <span class="hobby-number">01</span>
@@ -263,7 +264,7 @@
             </article>
 
             <!-- Hobby 2 -->
-            <article class="hobby-card" data-aos="fade-up" data-aos-delay="100">
+            <article id="cookingCard"  class="hobby-card" data-aos="fade-up" data-aos-delay="100">
               <div class="hobby-top">
                 <span class="hobby-icon">🍳</span>
                 <span class="hobby-number">02</span>
@@ -278,7 +279,7 @@
             </article>
 
             <!-- Hobby 3 -->
-            <article class="hobby-card" data-aos="fade-up" data-aos-delay="200">
+            <article id="animeCard" class="hobby-card" data-aos="fade-up" data-aos-delay="200">
               <div class="hobby-top">
                 <span class="hobby-icon">🎥</span>
                 <span class="hobby-number">03</span>
@@ -304,15 +305,9 @@
           <!-- ================= POPUP HOBBIES ================= -->
       <div class="popup-overlay" id="popupOverlay">
 
-          <div class="popup-box">
-
-              <button class="close-popup" id="closePopup">
-                  ✕
-              </button>
-
-              <div id="popupContent"></div>
-
-          </div>
+      <div class="popup-box">
+          <div id="popupContent"></div>
+      </div>
 
       </div>
       
@@ -549,47 +544,47 @@
               >
             </div>
           </div>
-<form 
-  class="contact-form"
-  action="https://formspree.io/f/mvzeoeqa"
-  method="POST"
-  data-aos="fade-up"
-  data-aos-delay="120"
->
-  <label>
-    Full Name
-    <input
-      type="text"
-      name="name"
-      placeholder="Your name"
-      required
-    />
-  </label>
+        <form 
+          class="contact-form"
+          action="https://formspree.io/f/mvzeoeqa"
+          method="POST"
+          data-aos="fade-up"
+          data-aos-delay="120"
+        >
+          <label>
+            Full Name
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required
+            />
+          </label>
 
-  <label>
-    Email Address
-    <input
-      type="email"
-      name="email"
-      placeholder="your@email.com"
-      required
-    />
-  </label>
+          <label>
+            Email Address
+            <input
+              type="email"
+              name="email"
+              placeholder="your@email.com"
+              required
+            />
+          </label>
 
-  <label>
-    Message
-    <textarea
-      name="message"
-      rows="4"
-      placeholder="Tell me something..."
-      required
-    ></textarea>
-  </label>
+          <label>
+            Message
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Tell me something..."
+              required
+            ></textarea>
+          </label>
 
-  <button type="submit">Send Message</button>
+          <button type="submit">Send Message</button>
 
-  <p class="form-message" aria-live="polite"></p>
-</form>
+          <p class="form-message" aria-live="polite"></p>
+        </form>
         </div>
       </section>
     </main>
