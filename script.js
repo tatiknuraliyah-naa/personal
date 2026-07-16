@@ -138,3 +138,117 @@ for(let i = 0; i < totalStars; i++){
     stars.appendChild(star);
 
 }
+const popup = document.getElementById("popupOverlay");
+const popupContent = document.getElementById("popupContent");
+const closePopup = document.getElementById("closePopup");
+
+let popupTimer;
+
+function showPopup(title, cards){
+
+    popup.classList.add("show");
+
+    popupContent.innerHTML = `
+        <h2 class="popup-title">${title}</h2>
+
+        <div class="popup-grid">
+            ${cards}
+        </div>
+    `;
+
+    clearTimeout(popupTimer);
+
+    popupTimer = setTimeout(() => {
+        popup.classList.remove("show");
+    }, 5000);
+
+}
+
+closePopup.onclick = () => {
+
+    popup.classList.remove("show");
+
+};
+
+popup.onclick = (e) => {
+
+    if(e.target === popup){
+
+        popup.classList.remove("show");
+
+    }
+
+}
+document.getElementById("musicCard").onclick=()=>{
+
+showPopup("🎧 Favorite Music",`
+
+<div class="popup-card big">
+<img src="images/laufey.jpg">
+</div>
+
+<div class="popup-card">
+<img src="images/fujikaze.jpg">
+</div>
+
+<div class="popup-card">
+<img src="images/nctdream.jpg">
+</div>
+
+<div class="popup-card wide">
+<img src="images/mozart.jpg">
+</div>
+
+`);
+
+};
+document.getElementById("cookingCard").onclick=()=>{
+
+showPopup("🍳 Cooking",`
+
+<div class="popup-card big">
+<img src="images/cooking.jpg">
+</div>
+
+<div class="popup-card big">
+<img src="images/baking.jpg">
+</div>
+
+`);
+
+};
+document.getElementById("animeCard").onclick=()=>{
+
+showPopup("🎥 Anime & Streams",`
+
+<div class="popup-card big">
+<img src="images/onepiece.jpg">
+</div>
+
+<div class="popup-card">
+<img src="images/spyxfamily.jpg">
+</div>
+
+<div class="popup-card">
+<img src="images/demonslayer.jpg">
+</div>
+
+<div class="popup-card">
+<img src="images/ghibli.jpg">
+</div>
+
+<div class="popup-card">
+<img src="images/sean.jpg">
+</div>
+
+<div class="popup-card">
+<img src="images/youtube.jpg">
+</div>
+
+<div class="popup-card">
+<img src="images/tiktok.jpg">
+</div>
+
+`);
+
+};
