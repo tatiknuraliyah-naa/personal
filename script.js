@@ -173,184 +173,122 @@ popup.onclick = (e) => {
     }
 
 }
-document.getElementById("musicCard").onclick=()=>{
+document.getElementById("musicCard").onclick = () => {
 
 showPopup("🎧 Favorite Music",`
 
-<div class="popup-card">
-<img src="images/laufey.jpg">
-<div class="photo-text">
-Laufey 🎷
-</div>
-</div>
+<div class="popup-gallery">
 
+    <div class="popup-card">
+        <img src="images/jazz.jpg">
+        <div class="photo-text">🎷 Jazz</div>
+    </div>
 
-<div class="popup-card">
-<img src="images/fujikaze.jpg">
-<div class="photo-text">
-Fujii Kaze 🌿
-</div>
-</div>
+    <div class="popup-card">
+        <img src="images/pop2.png">
+        <div class="photo-text">🎧 Pop</div>
+    </div>
 
+    <div class="popup-card">
+        <img src="images/kpop2.png">
+        <div class="photo-text">💚 K-Pop</div>
+    </div>
 
-<div class="popup-card">
-<img src="images/nctdream.jpg">
-<div class="photo-text">
-NCT Dream 💚
-</div>
-</div>
+    <div class="popup-card">
+        <img src="images/classic.jpg">
+        <div class="photo-text">🎼 Classical</div>
+    </div>
 
-
-<div class="popup-card">
-<img src="images/mozart.jpg">
-<div class="photo-text">
-Mozart 🎼
 </div>
-</div>
-
 
 <div class="popup-caption">
-
-Music is my little escape.  
-It helps me recharge, improve my mood,
-and stay inspired during my creative journey.
-
+Music is my little escape. Every genre brings a different mood, from the warmth of jazz and the elegance of classical music to the energy of K-pop and the familiarity of pop.
 </div>
 
 `);
 
 };
-document.getElementById("cookingCard").onclick=()=>{
+document.getElementById("cookingCard").onclick = () => {
 
 showPopup("🍳 Cooking",`
 
-<div class="popup-card">
-<img src="images/cooking.jpg">
+<div class="popup-gallery">
 
-<div class="photo-text">
-Cooking 🍳
-</div>
+    <div class="popup-card">
+        <img src="images/cooking.jpg">
+        <div class="photo-text">Cooking 🍳</div>
+    </div>
 
-</div>
-
-
-<div class="popup-card">
-<img src="images/baking.jpg">
-
-<div class="photo-text">
-Baking 🧁
-</div>
+    <div class="popup-card">
+        <img src="images/baking.jpg">
+        <div class="photo-text">Baking 🧁</div>
+    </div>
 
 </div>
-
 
 <div class="popup-caption">
-
-I enjoy making simple homemade dishes,
-especially pancakes and egg-based recipes.
-Cooking helps me explore creativity,
-patience, and new flavors.
-
+I enjoy making simple homemade dishes, especially pancakes and egg-based recipes. Cooking allows me to explore creativity, patience, and new flavors.
 </div>
 
 `);
 
 };
-document.getElementById("animeCard").onclick=()=>{
+document.getElementById("animeCard").onclick = () => {
 
-showPopup("🎥 Anime & Streams",`
+showPopup("🎥 Anime & Entertainment",`
 
-<!-- ANIME SECTION -->
+<div class="popup-subtitle">🌸 Favorite Anime</div>
 
-<div class="popup-card">
-<img src="images/onepiece.jpg">
+<div class="popup-gallery">
 
-<div class="photo-text">
-One Piece 🌊
-</div>
+    <div class="popup-card">
+        <img src="images/onepiece.jpg">
+        <div class="photo-text">One Piece 🌊</div>
+    </div>
 
-</div>
+    <div class="popup-card">
+        <img src="images/spyxfamily.jpg">
+        <div class="photo-text">Spy x Family 🕵️</div>
+    </div>
 
+    <div class="popup-card">
+        <img src="images/demonslayer.jpg">
+        <div class="photo-text">Demon Slayer ⚔️</div>
+    </div>
 
-<div class="popup-card">
-<img src="images/spyxfamily.jpg">
-
-<div class="photo-text">
-Spy x Family 🕵️
-</div>
-
-</div>
-
-
-<div class="popup-card">
-<img src="images/demonslayer.jpg">
-
-<div class="photo-text">
-Demon Slayer ⚔️
-</div>
+    <div class="popup-card">
+        <img src="images/ghibli.jpg">
+        <div class="photo-text">Ghibli ✨</div>
+    </div>
 
 </div>
-
-
-<div class="popup-card">
-<img src="images/ghibli.jpg">
-
-<div class="photo-text">
-Ghibli ✨
-</div>
-
-</div>
-
 
 <div class="popup-caption">
-
-Anime is one of my favorite ways to relax and
-find inspiration through creative stories,
-unique characters, and beautiful worlds.
-
+Anime is one of my favorite ways to relax and find inspiration through creative stories, unique characters, and beautiful worlds.
 </div>
 
+<hr class="popup-divider">
 
+<div class="popup-subtitle">🎮 Favorite Creators</div>
 
-<!-- STREAM SECTION -->
-<div class="popup-card">
-<img src="images/sean.jpg">
+<div class="popup-gallery">
 
-<div class="photo-text">
-Sean 🎧
-</div>
+    <div class="popup-card">
+        <img src="images/sean.jpg">
+        <div class="photo-text">Sean 🎧</div>
+    </div>
 
-</div>
+    <div class="popup-card">
+        <img src="images/trioedamame.jpg">
+        <div class="photo-text">Trio Edamame 🫛</div>
+    </div>
 
-
-<div class="popup-card">
-<img src="images/youtube.png">
-
-<div class="photo-text">
-YouTube ▶️
-</div>
 
 </div>
-
-
-<div class="popup-card">
-<img src="images/tiktok.png">
-
-<div class="photo-text">
-TikTok 🎬
-</div>
-
-</div>
-
 
 <div class="popup-caption">
-
-Watching streams and online content helps me
-relax after studying, discover new ideas,
-and enjoy creative content from different creators.
-
+Watching creators and online content helps me relax after studying, discover new ideas, and enjoy creative content from different creators.
 </div>
-
 
 `);
 
